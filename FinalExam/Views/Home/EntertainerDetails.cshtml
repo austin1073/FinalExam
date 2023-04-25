@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Entertainer
+
+@{
+    ViewData["Title"] = "Entertainer Details";
+}
+
+
+<form asp-action="EditEntertainer" method="post">
+    <input type="hidden" asp-for="EntertainerId" name="id" />
+
+    <div class="form-group">
+        <label asp-for="EntStageName">Stage Name:</label>
+        <input asp-for="EntStageName" class="form-control" />
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="EntSsn">SSN:</label>
+            <input type="number" asp-for="EntSsn" class="form-control" />
+        </div>
+
+        <div class="form-group col-md-6">
+            <label asp-for="EntPhoneNumber">Phone Number:</label>
+            <input asp-for="EntPhoneNumber" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EntStreetAddress">Street Address:</label>
+        <input asp-for="EntStreetAddress" class="form-control" />
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="EntCity">City:</label>
+            <input asp-for="EntCity" class="form-control" />
+        </div>
+
+        <div class="form-group col-md-4">
+            <label asp-for="EntState">State:</label>
+            <input asp-for="EntState" class="form-control" />
+        </div>
+
+        <div class="form-group col-md-2">
+            <label asp-for="EntZipCode">Zip Code:</label>
+            <input asp-for="EntZipCode" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="EntWebPage">Web Page:</label>
+            <input asp-for="EntWebPage" class="form-control" />
+        </div>
+
+        <div class="form-group col-md-6">
+            <label asp-for="EntEmailAddress">Email Address:</label>
+            <input asp-for="EntEmailAddress" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateEntered">Date Entered/Updated:</label>
+        <input asp-for="DateEntered" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+</form><br />
+
+
+<form asp-action="DeleteEntertainer" method="post">
+    <input type="hidden" asp-for="EntertainerId" name="id" />
+    <!-- Add other input fields for the rest of the properties -->
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
